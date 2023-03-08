@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+	<style>
+		#principal {
+			border: solid 1px black;
+			width: 80%;
+			margin: 0 auto;
+			podding: 5px;
+		}
+
+		center {
+			font-family: sans-serif;
+			padding: 5px;
+			font-size-adjust: 35;
+			font-size: 35px;
+
+		}
+
+
+		fieldset {
+			margin-bottom: 15px;
+		}
+
+		legend {
+			border: solid 1px violet;
+			padding: 6px;
+			font-family: fantasy;
+			border-radius: 20px;
+			background: lightblue;
+		}
+
+		#mifoto {
+			margin: 15px;
+			border: solid 4px black;
+		}
+
+		body {
+			background-color: #B8BAC8;
+		}
+
+		ul {
+
+			padding: 5px;
+			font-family: cursive;
+
+		}
+	</style>
+
+<a href="http://tu-sitio.com" 
+onmouseover="javascript:alert('Gracias por su tiempo');return false">Vínculo</a>
+
+	<div id="principal">
+		<img src="fotocv.jpeg" id="mifoto" width="150" align="left">
+		<center>
+			<h2>Estrella Cuixa</h2>
+		</center>
+
+		<br><br><br><br>
+
+		<fieldset>
+			<legend>Datos Personales</legend>
+			<ul>
+				<li>DNI: 11.345.654</li>
+				<li>Fecha de nacimiento: 11/08/2000</li>
+				<li>Edad: 23 Años</li>
+				<li>Nacionalidad: Argentina</li>
+				<li>Direccion: Curuzu Cuatia 28</li>
+				<li>Celular: 11-2345-7890</li>
+				<li>Email: Estre.ec@gmail.com</li>
+			</ul>
+		</fieldset>
+
+		<fieldset>
+			<legend>Estudios Realizados</legend>
+			<ul>
+				<li>Estudios primarios: Completos, Escuela N°12</li>
+				<li>Estudios secundarios: Completos, Escuela N°16</li>
+			</ul>
+		</fieldset>
+
+		<fieldset>
+			<legend>Idiomas</legend>
+			<ul>
+				<li>Español</li>
+				<li>Ingles</li>
+				<li>Italiano</li>
+			</ul>
+		</fieldset>
+
+		<fieldset>
+			<legend>Trabajos Anteriores</legend>
+			<ul>
+				<li>Camarera en Ill Vero Cafe</li>
+				<li>Vendedora de ropa, Tango Moda</li>
+
+			</ul>
+		</fieldset>
+	</div>
+	<script>
+		function startTime(){
+		today=new Date();
+		h=today.getHours();
+		m=today.getMinutes();
+		s=today.getSeconds();
+		m=checkTime(m);
+		s=checkTime(s);
+		document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+		t=setTimeout('startTime()',500);}
+		function checkTime(i)
+		{if (i<10) {i="0" + i;}return i;}
+		window.onload=function(){startTime();}
+		</script>
+		<div id="reloj" style="font-size:20px;"></div>    
+
+		<div style="float:right;">
+			<script>
+			//<![CDATA[
+			var  today = new Date();
+			var m = today.getMonth() + 1;
+			var mes = (m < 10) ? '0' + m : m;
+			  document.write('Fecha: '+today.getDate(),'/' +mes,'/'+today.getYear());
+			//]]> 
+			</script></div>
+
+<input type="button" value="Imprime esta página" onclick="window.print()">
+	   
+	 </body>
+
+</html>
